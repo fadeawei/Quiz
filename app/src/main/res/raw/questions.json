@@ -2,5 +2,42 @@
   {
     "question": "Does Braden have Airpods?",
     "answer": true
+  },
+  {
+    "question": "Ayush eat meat",
+    "answer" : false
+  },
+  {
+    "question": "Evan isn't as Canadian as he thinks he is",
+    "answer" : true
+  },
+  {
+    "question": "Sage Pierone is Wakandan",
+    "answer" : false
+  },
+  {
+    "question": "They call Ian McThick",
+    "answer" : true
+  },
+  {
+    "question": "Michael is a D1 rapper",
+    "answer" : true
+  },
+  {
+    "question": "Digimon is better than Pokemon",
+    "answer" : false
+  },
+  {
+    "question": "the antiderivative of e^x is e^x",
+    "answer" : true
+  },
+  {
+    "question": "Manav is vegetarian",
+    "answer" : false
+  },
+  {
+    "question": "Charles is a SAT GOD",
+    "answer" : true
   }
+
 ]

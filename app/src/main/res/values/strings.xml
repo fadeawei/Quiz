@@ -1,3 +1,7 @@
 <resources>
+    <string name="title_activity_display_score">DisplayScore</string>
+    <string name="answer_true">True</string>
+    <string name="answer_false">False</string>
+    <string name="score">Score</string>
     <string name="app_name">Quiz</string>
 </resources>

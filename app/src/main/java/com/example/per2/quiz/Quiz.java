@@ -1,49 +1,49 @@
 package com.example.per2.quiz;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Map;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
+import java.util.List;
 
-import com.google.gson.Gson;
-
-import java.util.Properties;
-
-public class Quiz extends AppCompatActivity {
-    String jsonString;
-    public static final String TAG = "MainActivity";
+public class Quiz {
+    private int count = 0;
+    private List<Question> question;
+    private int score;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
-        InputStream JsonFileInputStream = getResources().openRawResource(R.raw.questions);
-        jsonString = readJsoninString(JsonFileInputStream, this);
-        Log.d(TAG, "onCreate: " + jsonString);
-
-        Gson gson = new Gson();
-
-
+    public String toString() {
+        return "Quiz{" +
+                "count=" + count +
+                ", question=" + question +
+                ", score=" + score +
+                '}';
     }
 
-    public static String readJsoninString(InputStream JsonFile, Context c) {
-        try {
-                int size = JsonFile.available();
-                byte[] buffer = new byte[size];
-                JsonFile.read(buffer);
-                JsonFile.close();
-                String text = new String(buffer);
+    public Quiz(List<Question> question) {
+        this.question = question;
+        this.score = 0;
+    }
 
-                return text;
+    public List<Question> getQuestions() {
+        return question;
+    }
 
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+    public void setQuestion(List<Question> question) {
+        this.question = question;
+    }
 
-        }
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore() {
+        score++;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public static final int TOTALCOUNT = 10;
+
+
 
 
 }
